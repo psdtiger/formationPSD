@@ -41,4 +41,9 @@ public class StartWorld {
                             .hasContentType("application/json")
                             .hasBodyText("{\"alive\":true}");
     }
+    
+    @Test
+    public void shareWebPageChallenge() throws IOException {
+        yose.home().displaysGreeting("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>");
+    }
 }
