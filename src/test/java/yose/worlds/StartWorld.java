@@ -44,6 +44,10 @@ public class StartWorld {
     
     @Test
     public void shareWebPageChallenge() throws IOException {
-        yose.home().displaysGreeting("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>");
+        
+    	response = request.get("/");
+
+        assertThat(response).isOK()
+                            .hasBodyText("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>");
     }
 }
