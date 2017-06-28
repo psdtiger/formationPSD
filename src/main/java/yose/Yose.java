@@ -19,7 +19,7 @@ public class Yose {
         final Gson gson = new Gson();
 
         server.start(new DynamicRoutes() {{
-            get("/").to((request, response) -> response.body("Hello Yose (<a href>https://github.com/OrangePSDPanda/formationPSD/tree/SHARE</a>)"));
+            get("/").to((request, response) -> response.body("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/SHARE\">Hello Yose</a>"));
             get("/ping").to(new Ping(gson)::pong);
         }});
     }
