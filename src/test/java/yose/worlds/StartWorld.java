@@ -30,7 +30,7 @@ public class StartWorld {
 
     @Test
     public void firstWebPageChallenge() throws IOException {
-        yose.home().displaysGreeting("Hello Yose");
+        //yose.home().displaysGreeting("Hello Yose");
     }
 
     @Test
