@@ -55,6 +55,6 @@ public class StartWorld {
     public void contactInfoWebPageChallenge() throws IOException {
         
     	response = request.get("/");
-    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"./contact\">Contact</a>"));
+    	assertTrue(response.bodyText().contains("<a id=\"contact-me-link\" href=\"./contact\">Contact</a>"));
     }
 }
