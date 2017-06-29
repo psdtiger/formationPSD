@@ -48,7 +48,7 @@ public class StartWorld {
         
     	response = request.get("/");
 
-    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>"));
+    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose repository of Panda</a>"));
     }
     
     @Test
