@@ -48,7 +48,7 @@ public class StartWorld {
         
     	response = request.get("/");
 
-    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>"));
+    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose repository of Panda</a>"));
     }
     
     @Test
@@ -62,6 +62,6 @@ public class StartWorld {
     public void pingWebPageChallenge() throws IOException {
         
     	response = request.get("/");
-    	assertTrue(response.bodyText().contains("<a id=\"ping-challenge-link\" href=\"./ping\">Ping challenge</a>"));
+    	assertTrue(response.bodyText().contains("<a id=\"ping-challenge-link\" href=\"https://damp-dawn-19948.herokuapp.com/ping\">Ping challenge</a>"));
     }
 }
