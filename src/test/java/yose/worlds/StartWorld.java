@@ -8,6 +8,7 @@ import org.junit.Test;
 import yose.YoseDriver;
 
 import java.io.IOException;
+import static org.junit.Assert.*;
 
 import static com.vtence.molecule.testing.http.HttpResponseAssert.assertThat;
 
@@ -47,7 +48,13 @@ public class StartWorld {
         
     	response = request.get("/");
 
-        assertThat(response).isOK()
-                            .hasBodyText("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>");
+    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>"));
+    }
+    
+    @Test
+    public void contactInfoWebPageChallenge() throws IOException {
+        
+    	response = request.get("/");
+    	assertTrue(response.bodyText().contains("<a id=\"repository-link\" href=\"./contact\">Contact</a>"));
     }
 }
