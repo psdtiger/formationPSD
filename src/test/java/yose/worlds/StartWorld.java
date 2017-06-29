@@ -57,4 +57,11 @@ public class StartWorld {
     	response = request.get("/");
     	assertTrue(response.bodyText().contains("<a id=\"contact-me-link\" href=\"./contact\">Contact</a>"));
     }
+    
+    @Test
+    public void pingWebPageChallenge() throws IOException {
+        
+    	response = request.get("/");
+    	assertTrue(response.bodyText().contains("<a id=\"ping-challenge-link\" href=\"./ping\">Ping challenge</a>"));
+    }
 }
