@@ -20,7 +20,7 @@ public class Yose {
 
         server.start(new DynamicRoutes() {{
             get("/").to((request, response) -> response.body("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>"
-            		+ "<br /><a id=\"contact-me-link\" href=\"./contact\">Contact</a><br /><a id=\"ping-challenge-link\" content-type=\"text/html\" href=\"./ping\">Ping challenge</a>").contentType("content-type text/html"));
+            		+ "<br /><a id=\"contact-me-link\" href=\"./contact\">Contact</a><br /><a id=\"ping-challenge-link\" content-type=\"text/html\" href=\"https://damp-dawn-19948.herokuapp.com/ping\">Ping challenge</a>").contentType("content-type text/html"));
             get("/ping").to(new Ping(gson)::pong);
             get("/primeFactors").to( new PrimeFactors(gson)::decompose);
             get("/contact").to((request, response) -> response.body("Contact information: panda@orange.com"));
