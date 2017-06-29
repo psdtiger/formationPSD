@@ -21,6 +21,7 @@ public class Yose {
         server.start(new DynamicRoutes() {{
             get("/").to((request, response) -> response.body("<a id=\"repository-link\" href=\"https://github.com/OrangePSDPanda/formationPSD/tree/master\">Hello Yose </a>"));
             get("/ping").to(new Ping(gson)::pong);
+            get("/primeFactors").to( new PrimeFactors(gson)::decompose);
         }});
     }
 
