@@ -39,5 +39,16 @@ public class PowerOfTwoTest {
                             		+ "}");
 
     }
+    @Test
+    public void powerOfTwoOf16() throws IOException {
+        response = request.get("/primeFactors?number=16");
+
+        assertThat(response).isOK()
+                            .hasContentType("application/json")
+                            .hasBodyText("{\"number\":16,"
+                            		+ "\"decomposition\":[2,2,2,2]"
+                            		+ "}");
+
+    }
     
 }

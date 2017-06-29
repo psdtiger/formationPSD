@@ -33,8 +33,16 @@ public class PrimeFactors {
         
         public Decompose(int nb) {
         	number = nb;
-        	decomposition = new int[1];
-        	decomposition[0] = 2;
+        	
+        	int power = 0;
+        	while (nb >= 1){
+        		nb= nb /2;
+        		power++;
+        	}
+        	decomposition = new int[power-1];
+        	for (int i=0; i<power-1 ; i++){
+        	decomposition[i] = 2;
+        	}
         }
     } 
 }
